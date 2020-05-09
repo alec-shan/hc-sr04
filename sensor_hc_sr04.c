@@ -17,7 +17,7 @@
 #define DBG_LVL DBG_INFO
 
 #define SENSOR_DISTANCE_RANGE_MAX (400)
-#define SENSOR_DISTANCE_RANGE_MIN (4)
+#define SENSOR_DISTANCE_RANGE_MIN (2)
 
 static struct sr04_device *sr04_dev;
 
