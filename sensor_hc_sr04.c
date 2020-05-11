@@ -86,7 +86,7 @@ static int32_t _sr04_hwtimer_stop(rt_device_t dev)
     rt_hwtimerval_t hw_val;
 
     rt_device_read(dev, 0, &hw_val, sizeof(hw_val));
-    rt_kprintf("read: sec = %d, usec = %d\n", hw_val.sec, hw_val.usec);
+    // rt_kprintf("read: sec = %d, usec = %d\n", hw_val.sec, hw_val.usec);
 
     rt_device_close(dev);
 
