@@ -167,10 +167,10 @@ static sr04_device_t _sr04_init(struct rt_sensor_config *cfg)
     rt_kprintf("hwtimer: %s\n", dev->hwtimer);
 
     pins = (rt_base_t *)cfg->intf.user_data;
-    rt_kprintf("trig: %d, echo: %d\n", pins[0], pins[1]);
+    // rt_kprintf("trig: %d, echo: %d\n", pins[0], pins[1]);
     dev->trig_pin = pins[0];
     dev->echo_pin = pins[1];
-    rt_kprintf("trig: %d, echo: %d\n", dev->trig_pin, dev->echo_pin);
+    // rt_kprintf("trig: %d, echo: %d\n", dev->trig_pin, dev->echo_pin);
     rt_pin_mode(dev->trig_pin, PIN_MODE_OUTPUT);
     rt_pin_mode(dev->echo_pin, PIN_MODE_INPUT);
 
