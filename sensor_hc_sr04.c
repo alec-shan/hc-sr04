@@ -106,7 +106,7 @@ int32_t sr04_get_distance(void)
     rt_pin_write(sr04_dev->trig_pin, PIN_LOW);
     while ((rt_pin_read(sr04_dev->echo_pin) == PIN_LOW));
     _sr04_hwtimer_start(dev);
-    while ((rt_pin_read(sr04_dev->echo_pin) == PIN_HIGH));
+    while ((rt_pin_read(sr04_dev->echo_pin) == PIN_HIGH) && (sr04_dev->err != 0x88));
     duration = _sr04_hwtimer_stop(dev);
 
     distance = (int32_t)(duration * 340.0 / 2000.0 + 0.5);
